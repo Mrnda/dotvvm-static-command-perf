@@ -1,0 +1,9 @@
+﻿@viewModel DotVVM.StaticCommandPerf.ViewModels.DefaultViewModel, DotVVM.StaticCommandPerf
+@masterPage Views/MasterPage.dotmaster
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <h1>{{value: Title1}}</h1>
+
+    <dot:Button Text="Normal command" Click="{command:  SetTitle("Test")}" />
+    <dot:Button Text="Static Command" Click="{staticCommand: Title1 = DefaultViewModel.GetTitle("Test")}" />
+</dot:Content>
